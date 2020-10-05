@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+:root{
+ --firstColor: #2ecc71;
+ --secondColor: #f39c12;
+ --thirdColor:#e74c3c;
+ --background: #778beb;
+ --hover1:#6dc993;
+ --hover2:#e7ac4e;
+ --hover3:#e97b6f;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  background-color: var(--background);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top:30px;
+}
+.container-1{
+  margin-bottom:10px;
+}
+.container-1 h1{
+  text-align: center;
+  margin:5px;
+}
+input[type='text']{
+  width:50vw;
+  height:30px;
+  padding-left:10px;
+  font-size:18px;
+  border-radius:25px;
+  border: 1px solid;
+}
+input[type='text']:focus{
+  outline:none;
 }
 
-.App-link {
-  color: #61dafb;
+.container-2{
+  width:85vw;
+  height:50vh;
+  display:flex;
+  justify-content: space-between;
 }
+.cards{
+  width:30%;
+}
+.cards h2{
+  text-align: center;
+}
+.list{
+  width:100%;
+  min-height:90%;
+  border-radius:15px;
+  position:relative;
+}
+.list-1{
+background-color: var(--firstColor);
+}
+.list-2{
+  background-color: var(--secondColor);
+  }
+.list-3{
+    background-color: var(--thirdColor);
+}
+.item{
+  width:100%;
+  font-size:17px;
+  display:flex;
+  padding:10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.item:hover{
+  cursor: pointer;
+}
+.list-1 .item:hover{
+  background-color: var(--hover1);
+}
+.list-2 .item:hover{
+  background-color: var(--hover2);
+}
+.list-3 .item:hover{
+  background-color: var(--hover3);
+}
+.item p{
+  max-width:83%;
+}
+.icons-container{
+  display:flex;
+  position:absolute;
+  right:5px;
+  align-items: center;
+}
+.icons-container img{
+  width:20px;
+  margin-right:5px;
+  transition: transform 0.3s;
+  display:block;
+  height:auto;
+}
+.icons-container img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
